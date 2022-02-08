@@ -1,0 +1,32 @@
+.navbar {
+  background: $alt-background;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  width: 230px;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background: inherit;
+    border: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-text-color;
+    font-size: 1.2rem;
+  }
+
+  a:hover {
+    color: $alt-text-color;
+  }
+
+  @media (min-width: 500px) {
+    width: 320px;   
+  }
+}
