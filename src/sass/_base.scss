@@ -1,5 +1,5 @@
 $font-stack: Helvetica, sans-serif;
-$base-background: rgb(26, 26, 35);
+$base-background: rgb(26, 26, 45);
 $alt-background: rgb(41, 44, 53);
 $main-text-color: rgb(240, 240, 240);
 $alt-text-color: rgb(226, 76, 76);
@@ -21,5 +21,37 @@ body {
 
   @media (min-width: 500px) {
     font-size: 13px;
+  }
+}
+
+.section {
+  padding: 20px 0px;
+
+  .subheading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  
+    .section-header {
+      display: inline;
+      padding: 0 10px;
+      margin: 60px;
+      font-size: 2.7rem;
+      font-weight: 400;
+      background: $base-background;
+    }
+  
+    .line {
+      border: 1px solid $alt-text-color;
+      opacity: 80%;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      z-index: -1;
+    }
+
+    @media (min-width: 1100px) {
+      text-align: left;
+    }
   }
 }

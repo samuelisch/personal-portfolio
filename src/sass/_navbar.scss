@@ -1,13 +1,21 @@
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 6;
   background: $alt-background;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: 1100px) {
+    justify-content: end;
+  }
 }
 
 .links {
   width: 230px;
   max-width: 90%;
+  margin: 0 50px;
   display: flex;
   justify-content: space-between;
 
