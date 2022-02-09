@@ -1,0 +1,51 @@
+.contact-container {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-prompt {
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    background: $alt-background;
+    color: $main-text-color;
+    font-size: 1.3rem;
+    border: none;
+    padding: 5px;
+    margin: 5px 0;
+  }
+
+  textarea {
+    resize: none;
+    height: 50px;
+    color: $main-text-color;
+    font-size: 1.3rem;
+    padding: 5px;
+    margin: 5px 0;
+    font-family: inherit;
+    background: $alt-background;
+    border: none;
+  }
+
+  .button-container {
+    padding: 20px 0;
+    text-align: right;
+  }
+
+  .form-button {
+    padding: 5px;
+    background: inherit;
+    border: none;
+    color: $main-text-color;
+    font-size: 1.5rem;
+  }
+}
