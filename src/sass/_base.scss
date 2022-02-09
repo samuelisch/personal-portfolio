@@ -30,7 +30,13 @@ body {
   .subheading {
     position: relative;
     width: 100%;
-    text-align: center;
+    
+    .header-container {
+      width: 100%;
+      max-width: 1500px;
+      text-align: center;
+      margin: 0 auto;
+    }
   
     .section-header {
       display: inline;
@@ -51,7 +57,17 @@ body {
     }
 
     @media (min-width: 1100px) {
-      text-align: left;
+      .left {
+        text-align: left;
+      }
+      
+      .right {
+        text-align: right;
+      }
     }
+  }
+
+  .section-content {
+    padding: 60px 0;
   }
 }
