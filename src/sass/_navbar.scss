@@ -4,7 +4,7 @@
   z-index: 6;
   background: $alt-background;
   opacity: 95%;
-  padding: 15px;
+  padding: 20px 0;
 }
 
 .link-container {
@@ -21,7 +21,7 @@
 
 .links {
   width: 230px;
-  margin: 0 50px;
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
 
@@ -41,6 +41,7 @@
   }
 
   @media (min-width: 500px) {
-    width: 320px;   
+    width: 320px;
+    margin: 0 50px;
   }
 }
