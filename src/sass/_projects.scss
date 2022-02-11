@@ -1,0 +1,61 @@
+.project {
+  margin: 0 auto 30px;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.right-align {
+  flex-direction: row-reverse;
+}
+
+.project-img-container {
+  margin: 20px auto;
+  border: 2px solid green;
+  width: 90%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.project-details {
+  position: absolute;
+  top: 5px;
+  background: $base-background-translucent;
+  padding: 20px;
+  width: 40%;
+  max-width: 300px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  margin-top: 12px;
+}
+
+.details-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-button {
+  background: inherit;
+  border: none;
+  margin: 6px;
+  padding: 5px;
+  color: $main-text-color;
+  border-left: 3px solid $alt-text-color;
+  font-size: 1.3rem;
+
+  &:hover {
+    background: $alt-text-color;
+    cursor: pointer;
+  }
+}
