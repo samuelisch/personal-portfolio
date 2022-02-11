@@ -1,7 +1,6 @@
 import "./sass/main.scss";
 
 const hoverTexts = document.querySelectorAll('.hover');
-const projectGifs = document.querySelectorAll('.project-gif');
 const project = document.querySelectorAll('.project');
 
 function showImg(e: Event) {
