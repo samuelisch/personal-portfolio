@@ -40,6 +40,10 @@
     color: $alt-text-color;
   }
 
+  .current {
+    color: $alt-text-color;
+  }
+
   @media (min-width: 500px) {
     width: 320px;
     margin: 0 50px;

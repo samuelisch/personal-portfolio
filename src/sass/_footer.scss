@@ -1,0 +1,19 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background: $alt-background;
+  color: $main-text-color;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.top {
+  position: absolute;
+  color: $main-text-color;
+  background: $alt-text-color;
+  padding: 7px;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
