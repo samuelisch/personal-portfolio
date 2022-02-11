@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
   plugins: [
     new HtmlWebpackPlugin({ 
@@ -17,13 +18,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
+      {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.txt$/,
-        use: 'raw-loader',
+        loader: 'raw-loader',
       },
       {
         test: /\.scss$/,
@@ -31,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
     ],
   },
