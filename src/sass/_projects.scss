@@ -1,8 +1,12 @@
 .project {
-  margin: 0 auto 80px;
+  margin: 0 auto 150px;
   padding: 20px;
   max-width: 1100px;
   position: relative;
+
+  @media (min-width: 500px) {
+    margin: 0 auto 120px;
+  }
 }
 
 .project-img-container {
@@ -57,7 +61,7 @@
 
 .project-details {
   position: absolute;
-  top: 30px;
+  top: 0;
   background: $base-background-translucent;
   padding: 20px;
   width: 40%;
@@ -67,7 +71,14 @@
 }
 
 .left-details {
-  right: 0;
+  right: 20px;
+}
+
+.details-container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-title {
@@ -80,7 +91,7 @@
 }
 
 .details-buttons {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,6 +105,7 @@
   color: $main-text-color;
   border-left: 3px solid $alt-text-color;
   font-size: 1.3rem;
+  text-decoration: none;
 
   &:hover {
     background: $alt-text-color;

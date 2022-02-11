@@ -158,13 +158,15 @@
               <img class="project-preview right-side project-img" src="./assets/weatherer-still.png" alt="" />
             </div>
             <div class="project-details">
-              <div class="details-text">
-                <h3 class="project-title">Weatherer Social App</h3>
-                <p class="project-description">Full Stack social media application built with React, Redux, Node.js, Express.js and MongoDB.</p>
-              </div>
-              <div class="details-buttons">
-                <button class="project-button project-live weatherer-live">Live app</button>
-                <button class="project-button project-github cv-github">View repository</button>
+              <div class="details-container">
+                <div class="details-text">
+                  <h3 class="project-title">Weatherer Social App</h3>
+                  <p class="project-description">Full Stack social media application built with React, Redux, Node.js, Express.js and MongoDB.</p>
+                </div>
+                <div class="details-buttons">
+                  <a class="project-button project-live weatherer-live" href="https://weatherer-social-app.herokuapp.com/" target="_blank">Live app</a>
+                  <a class="project-button project-github weatherer-github" href="https://github.com/samuelisch/weatherer-social-app" target="_blank">View repository</a>
+                </div>
               </div>
             </div>
           </div>
@@ -174,13 +176,15 @@
               <img class="project-preview left-side project-img waldo" src="./assets/waldo-still.png" alt="" />
             </div>
             <div class="project-details left-details">
-              <div class="details-text">
-                <h3 class="project-title">'Where's Waldo?' game</h3>
-                <p class="project-description">Full-stack application with leaderboard, built with React, Node.js, Express, and MongoDB.</p>
-              </div>
-              <div class="details-buttons">
-                <button class="project-button project-live waldo-live">Live app</button>
-                <button class="project-button project-github cv-github">View repository</button>
+                <div class="details-container">
+                <div class="details-text">
+                  <h3 class="project-title">'Where's Waldo?' game</h3>
+                  <p class="project-description">Full-stack application with leaderboard, built with React, Node.js, Express, and MongoDB.</p>
+                </div>
+                <div class="details-buttons">
+                  <a class="project-button project-live waldo-live" href="https://wheres-waldo-samuelisch.herokuapp.com/" target="_blank">Live app</a>
+                  <a class="project-button project-github waldo-github" href="https://github.com/samuelisch/wheres-waldo" target="_blank">View repository</a>
+                </div>
               </div>
             </div>
           </div>
@@ -190,13 +194,15 @@
               <img class="project-preview right-side project-img cv" src="./assets/cv-still.png" alt="" />            
             </div>
             <div class="project-details">
-              <div class="details-text">
-                <h3 class="project-title">CV-Builder App</h3>
-                <p class="project-description">React application that exports result to PDF using html2canvas and jsPDF.</p>
-              </div>
-              <div class="details-buttons">
-                <button class="project-button project-live cv-live">Live app</button>
-                <button class="project-button project-github cv-github">View repository</button>
+              <div class="details-container">
+                <div class="details-text">
+                  <h3 class="project-title">CV-Builder App</h3>
+                  <p class="project-description">React application that exports result to PDF using html2canvas and jsPDF.</p>
+                </div>
+                <div class="details-buttons">
+                  <a class="project-button project-live cv-live" href="https://samuelisch.github.io/cv-builder/" target="_blank">Live app</a>
+                  <a class="project-button project-github cv-github" href="https://github.com/samuelisch/cv-builder" target="_blank">View repository</a>
+                </div>
               </div>
             </div>
           </div>
@@ -217,11 +223,11 @@
           </div>
           <p class="form-prompt">You can also leave your details below, and I'll get back to you as soon as I can.</p>
           <form class="contact-form">
-            <input type="text" name="name" aria-label="Name" placeholder="Name" />
-            <input type="email" name="email" aria-label="Email" placeholder="E-mail" />
-            <textarea name="message" aira-label="Message" placeholder="Message"></textarea>
+            <input type="text" name="name" aria-label="Name" placeholder="Name" required/>
+            <input type="email" name="email" aria-label="Email" placeholder="E-mail" required/>
+            <textarea name="message" aira-label="Message" placeholder="Message" required></textarea>
             <div class="button-container">
-              <button class="form-button" type="submit">Submit</button>
+              <a class="form-button" type="submit">Submit</a>
             </div>
           </form>
         </div>
