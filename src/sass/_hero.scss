@@ -31,10 +31,15 @@
   border: 2px solid $alt-text-color;
   border-radius: 8px;
   background: inherit;
-  color: $alt-text-color;
-  padding: 10px;
+  padding: 8px;
   width: 180px;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: $alt-text-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
