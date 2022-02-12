@@ -1,8 +1,11 @@
 import "./sass/main.scss";
+import service from './service';
+import notifications from './notification';
 
 const hoverTexts = document.querySelectorAll('.hover');
 const project = document.querySelectorAll('.project');
 const sections = document.querySelectorAll('section[id]');
+const form:any = document.querySelector('.contact-form');
 
 function showImg(e: Event) {
   const target:any = e.target;
@@ -46,7 +49,7 @@ function navHighlighter() {
   sections.forEach(current => {
     const currentSection:any = (<Element>current)
     const sectionHeight = currentSection.offsetHeight;
-    const sectionTop = currentSection.offsetTop - 250;
+    const sectionTop = currentSection.offsetTop - 500;
     const sectionId = current.getAttribute('id');
 
     //compare
@@ -58,9 +61,38 @@ function navHighlighter() {
   })
 }
 
+async function handleFormSubmit(e: Event) {
+  e.preventDefault();
+  const target = e.target;
+  const button:any = document.querySelector('.form-button');
+  if (target) {
+    try{
+      button.disabled = true;
+      const name:any = document.querySelector('.input-name');
+      const email:any = document.querySelector('.input-email');
+      const message:any = document.querySelector('.input-message');
+      if (name && email && message) {
+        const content = { 
+          name: name.value, 
+          email: email.value, 
+          message: message.value
+        };
+        await service.post(content);
+        form.reset();
+        notifications.displaySuccess();
+        button.disabled = false;
+      }
+    } catch (error) {
+      notifications.displayError()
+      button.disabled = false;
+    }
+  }
+}
+
 //listen for scroll
 window.addEventListener('scroll', navHighlighter);
 hoverTexts.forEach(text => text.addEventListener('mouseover', showImg));
 hoverTexts.forEach(text => text.addEventListener('mouseout', hideImg));
 project.forEach(project => project.addEventListener('mouseenter', hideGif));
 project.forEach(project => project.addEventListener('mouseleave', showGif));
+form?.addEventListener('submit', handleFormSubmit);

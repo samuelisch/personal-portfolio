@@ -1,5 +1,5 @@
 .contact-container {
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   width: 80%;
   max-width: 500px;
   margin: 0 auto;
@@ -10,27 +10,6 @@
   font-size: 1.3rem;
 }
 
-.contact-icons {
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-around;
-
-  .contact-icon {
-    width: 55px;
-    text-align: center;
-
-    img {
-      width: 50px;
-      transition: width .2s;
-
-      &:hover {
-        width: 55px;
-      }
-    }
-  }
-}
-
-/*
 .contact-form {
   position: relative;
   display: flex;
@@ -44,6 +23,10 @@
     border: none;
     padding: 10px;
     margin: 5px 0;
+  }
+  //autocomplete change background
+  input:-webkit-autofill {
+    transition: background-color 1s 5000s, color 1s 5000s;
   }
 
   textarea {
@@ -86,6 +69,9 @@
       background: $alt-text-color;
       cursor: pointer;
     }
+
+    &:disabled {
+      color: $alt-background-translucent;
+    }
   }
 }
-*/

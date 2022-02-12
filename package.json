@@ -5,6 +5,7 @@
   "repository": "https://github.com/samuelisch/personal-portfolio.git",
   "author": "Samuelisch <samuelchanwk@hotmail.com>",
   "license": "MIT",
+  "proxy": "https://localost:3002/",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
@@ -27,6 +28,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "axios": "^0.25.0",
     "lodash": "^4.17.21"
   }
 }

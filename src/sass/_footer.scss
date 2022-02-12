@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 40px 0;
+  padding: 40px 0 20px;
   background: $alt-background;
   color: $main-text-color;
   font-size: 1.2rem;
@@ -16,4 +16,38 @@
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.contact-icons {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-around;
+
+  .contact-icon {
+    width: 35px;
+    text-align: center;
+
+    img {
+      width: 35px;
+      transition: width .2s;
+
+      &:hover {
+        width: 35px;
+      }
+    }
+
+    @media (min-width: 500px) {
+      width: 50px;
+
+      img {
+        width: 45px;
+
+        &:hover {
+          width: 50px;
+        }
+      }
+    }
+  }
 }
