@@ -11,7 +11,7 @@ function animateHero() {
 
 document.addEventListener('readystatechange', event => {
   const target:any = event.target;
-  if (target.readyState === 'complete') {
+  if (target.readyState === 'interactive') {
     animateHero();
   }
 });
