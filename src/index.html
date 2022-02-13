@@ -12,8 +12,8 @@
     <section id="hero" class="hero">
       <div class="hero-details">
         <div class="hero-text">
-          <p>Hi, I'm <span class="name">Samuel</span>.</p>
-          <p>I am a full stack web developer.</p>
+          <p class="hero-one">Hi, I'm <span class="name">Samuel</span>.</p>
+          <p class="hero-two">I am a full stack web developer.</p>
         </div>
         <button type="button" class="view-button">
           <a href="#about">
@@ -227,8 +227,8 @@
           </div>
 
           <form class="contact-form">
-            <input class="input-name" type="text" name="name" aria-label="Name" placeholder="Name" required/>
-            <input class="input-email" type="email" name="email" aria-label="Email" placeholder="E-mail" required/>
+            <input class="input-name" type="text" name="name" aria-label="Name" placeholder="Name" maxlength="128" required />
+            <input class="input-email" type="email" name="email" aria-label="Email" placeholder="E-mail" maxlength="128" required />
             <textarea class="input-message" name="message" aira-label="Message" placeholder="Message" required></textarea>
             <div class="button-container">
               <p class="notification"></p>

@@ -1,11 +1,23 @@
 import "./sass/main.scss";
 import service from './service';
 import notifications from './notification';
+import './transitions';
 
 const hoverTexts = document.querySelectorAll('.hover');
 const project = document.querySelectorAll('.project');
 const sections = document.querySelectorAll('section[id]');
 const form:any = document.querySelector('.contact-form');
+const textarea:any = document.getElementsByClassName("input-message");
+
+for (let i = 0; i < textarea.length; i++) {
+  textarea[i].setAttribute("style", "height:" + (textarea[i].scrollHeight) + "px;overflow-y:hidden;");
+  textarea[i].addEventListener("input", () => OnInput(textarea[i]));
+}
+
+function OnInput(textarea: HTMLTextAreaElement) {
+  textarea.style.height = "auto";
+  textarea.style.height = (textarea.scrollHeight) + "px";
+}
 
 function showImg(e: Event) {
   const target:any = e.target;

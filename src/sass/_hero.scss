@@ -19,11 +19,28 @@
     flex-direction: column;
     align-items: center;
     font-size: 2.7rem;
+    transform: translateY(-100px);
 
     .name {
       color: $alt-text-color;
     }
   }
+}
+
+.hero-one {
+  opacity: 0%;
+  transition: transform 1s ease-in-out, opacity 1s ease-in;
+}
+
+.hero-two {
+  opacity: 0%;
+  transition: transform 1s ease-in-out, opacity 1s ease-in;
+  transition-delay: 1.3s;
+}
+
+.animate-hero {
+  opacity: 100%;
+  transform: translateY(100px);
 }
 
 .view-button {
@@ -34,12 +51,29 @@
   padding: 8px;
   width: 180px;
   font-size: 1.5rem;
+  opacity: 0%;
+  background: linear-gradient(to left, transparent 50%, $alt-text-color 50%) right;
+  background-size: 200%;
+  transition: opacity 1s ease-in 2s, background-position .2s ease-out;
 
   a {
     text-decoration: none;
-    color: $alt-text-color;
+    color: $main-text-color;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: transform .2s;
   }
+
+  &:hover {
+    background-position: left;
+
+    a {
+      transform: translateX(13px);
+    }
+  }
+}
+
+.animate-button {
+  opacity: 100%;
 }

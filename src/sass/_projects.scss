@@ -101,14 +101,17 @@
   background: inherit;
   border: none;
   margin: 6px;
-  padding: 5px;
+  padding: 8px 12px;
   color: $main-text-color;
   border-left: 3px solid $alt-text-color;
   font-size: 1.3rem;
   text-decoration: none;
+  background: linear-gradient(to left, transparent 50%, $alt-text-color 50%) right;
+  background-size: 200%;
+  transition: background-position .2s ease-out;
 
   &:hover {
-    background: $alt-text-color;
+    background-position: left;
     cursor: pointer;
   }
 }
