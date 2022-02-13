@@ -19,7 +19,6 @@
     flex-direction: column;
     align-items: center;
     font-size: 2.7rem;
-    transform: translateY(-100px);
 
     .name {
       color: $alt-text-color;
@@ -28,19 +27,15 @@
 }
 
 .hero-one {
-  opacity: 0%;
-  transition: transform 1s ease-in-out, opacity 1s ease-in;
+  position: relative;
+  animation: fadein 1s, fadedown 1s forwards;
 }
 
 .hero-two {
-  opacity: 0%;
-  transition: transform 1s ease-in-out, opacity 1s ease-in;
-  transition-delay: 1.3s;
-}
-
-.animate-hero {
-  opacity: 100%;
-  transform: translateY(100px);
+  position: relative;
+  opacity: 0;
+  animation: fadein 1s forwards, fadedown 1s forwards;
+  animation-delay: 1.5s;
 }
 
 .view-button {
@@ -54,7 +49,9 @@
   opacity: 0%;
   background: linear-gradient(to left, transparent 50%, $alt-text-color 50%) right;
   background-size: 200%;
-  transition: opacity 1s ease-in 2s, background-position .2s ease-out;
+  animation: fadein 2s forwards;
+  animation-delay: 2.3s;
+  transition: background-position .2s ease-out;
 
   a {
     text-decoration: none;
@@ -74,6 +71,12 @@
   }
 }
 
-.animate-button {
-  opacity: 100%;
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadedown {
+  from { top: -100px; }
+  to { top: 0px; }
 }

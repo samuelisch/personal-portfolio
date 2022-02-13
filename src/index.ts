@@ -1,7 +1,6 @@
 import "./sass/main.scss";
 import service from './service';
 import notifications from './notification';
-import './transitions';
 
 const hoverTexts = document.querySelectorAll('.hover');
 const project = document.querySelectorAll('.project');
