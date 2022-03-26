@@ -58,19 +58,17 @@
   }
 
   .form-button {
-    padding: 8px 12px;
+    padding: 10px;
     background: inherit;
     border: none;
-    border-left: 3px solid $alt-text-color;
     color: $main-text-color;
     font-size: 1.5rem;
-    background: linear-gradient(to left, transparent 50%, $alt-text-color 50%) right;
-    background-size: 200%;
-    transition: background-position .2s ease-out;
+    background: $alt-text-color;
+    transition: border-radius .2s ease-out;
 
     &:hover {
-      background-position: left;
       cursor: pointer;
+      border-radius: 10px;
     }
 
     &:disabled {

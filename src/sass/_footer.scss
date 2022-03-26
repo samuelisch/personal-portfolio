@@ -17,6 +17,13 @@
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
+  transition: transform .2s ease-in-out, border-radius .2s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(105%);
+    border-radius: 5px;
+  }
 }
 
 .contact-icons {
@@ -32,10 +39,11 @@
 
     img {
       width: 35px;
-      transition: width .2s;
+      transition: all .2s ease-out;
 
       &:hover {
-        width: 35px;
+        cursor: pointer;
+        transform: scale(110%) translateY(-2px);
       }
     }
 
@@ -44,10 +52,6 @@
 
       img {
         width: 45px;
-
-        &:hover {
-          width: 50px;
-        }
       }
     }
   }
